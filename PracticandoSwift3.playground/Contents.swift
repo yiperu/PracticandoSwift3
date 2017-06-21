@@ -35,9 +35,20 @@ cur(x: 5)("2")
 // Este puede ser nil, pero si me lo pides te voy a entregar el valor completo
 let five: Int! = 5  // Optional inplicitamente desemvuelto
 type(of: five)
-let other = five
+let other = five // esto solo es una referencia, no se esta usando
 type(of: other)
-let result = five + 2
+let result = five + 2 // aqui si se utiliza por lo tanto se desemvielve
 type(of: result)
+
+// a los 2 tipos los llamamos validos u opcionale
+
+// En este tipo de casos habia problemas
+func method2() -> Int! { return 10 }
+let resp1: [Int] = [method2()]
+let resp2: [Int?] = [method2()]
+//let resp3: [Int!] = [method2()]  // Esto ya no se puede
+//resp3[0]!!                       // Esto ya no se puede
+
+
 
 
