@@ -159,9 +159,15 @@ let d2: [AnyHashable: AnyObject] = ["key": NSDate()]
 let d22: [AnyHashable: Any] = ["key": NSDate()]
 
 
+// - - - 
+let logo = UIImage(named: "ironSpider.jpg")
 
+// - - - -
 
-
+let me = User()
+me.hello()
+me.load()
+me.hello()
 
 
 
