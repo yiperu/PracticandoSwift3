@@ -170,6 +170,15 @@ me.load()
 me.hello()
 
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Funciones en Swift pueden recibier argumentos variables:
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+func methodWithVariablesArguments(ints: Int..., other: String = "a") {
+  print(ints)
+  print(other)
+}
+
+methodWithVariablesArguments(ints: 2,3,4,5, other: "b")
 
 
 
