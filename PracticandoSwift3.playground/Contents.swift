@@ -68,8 +68,38 @@ method3(a:6, b:7, c:8)
 method3(a: 4, c: 3)
 method3(c: 3)
 
+// How use the loop now
 
+//before
+//for var i=0; i<= 10; i++ {
+//
+//}
 
+// Now
+let collection = ["uno","dos","tres"]
+for word in collection {
+  print(word)
+}
+
+for i in 0...collection.count{
+  print(i)
+}
+
+let dictionary = ["A":1, "B":12]
+
+for e in dictionary {
+  print(e.key)
+  print(e.value)
+}
+
+// Tuplas
+let s = (Index: 1, Value: "One")
+s.Index
+s.Value
+
+print("---")
+print(s.Index)
+print(s.Value)
 
 
 
