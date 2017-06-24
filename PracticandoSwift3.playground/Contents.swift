@@ -22,7 +22,7 @@ func cur(x: Int) -> (String) -> Float {
 
 let partial = cur(x: 5)
 let final = partial("2")
-final
+final // Mostramos que final es igual a 7
 
 // Another way of call
 cur(x: 5)("2")
@@ -48,6 +48,28 @@ let resp1: [Int] = [method2()]
 let resp2: [Int?] = [method2()]
 //let resp3: [Int!] = [method2()]  // Esto ya no se puede
 //resp3[0]!!                       // Esto ya no se puede
+
+// Lo que desaparecrio de Swift ++ --
+var i = 0
+//i++
+//i--
+//++i
+//--i
+
+i += 4
+i -= 4
+
+// Respetar el orden de losp arametros definidos (en ruby es un hash, asi que no hay probema)
+func method3(a: Int = 0, b: Int = 1, c: Int = 2){}
+
+method3()
+method3(a:6, b:7, c:8)
+//method3(c: 4, a: 45) // Importa el orden
+method3(a: 4, c: 3)
+method3(c: 3)
+
+
+
 
 
 
