@@ -103,4 +103,52 @@ print(s.Value)
 
 
 
+// New style of sintaxi
+// Una metodo con el mismo nombre y diferente nombre de parametro ya es diferente, es otro metodo
+// Antes para escapar un parametro usabamos _
+// Ahora las enumeraciones empiezan con minuscula y usa camelCase
+
+// Before methods
+//func preformWithName(_ aName: String, andPassword: String){}
+//preformWithName("francisco", andPassword: "s3cur3!")
+// Now
+func perform(name: String, password: String) {}
+func perform(email: String, password: String) {}
+func perform(_ name: String, password: String) {}
+
+perform("henry", password: "s3cur3")
+perform(name: "Henry", password: "s3cur3")
+perform(email: "email", password: "xxx")
+
+// - - - - - - -  - - - - - - -  - - - - - - -
+//UIColor.blackColor()
+UIColor.black
+// - - - - - - -  - - - - - - -  - - - - - - -
+var str01 = "string"
+//str01.appendAttributeString("sss")
+str01.append("sss")
+// - - - - - - -  - - - - - - -  - - - - - - -
+//func moveToPoint(_: CGPoint)
+//func addLineToPoint(_: CGPoint)
+//func move(to point: CGPoint)
+//func addLine(to point: CGPoint)
+
+var rec = CGRect(x: 1, y: 2, width: 3, height: 4)
+CGRect.offsetBy(rec)(dx: 5, dy: 6)
+
+OperationQueue.main.addOperation {
+  perform(name: "henry", password: "s3cur3")
+}
+
+UIInterfaceOrientation.landscapeLeft // Ahora landscapeLeft inicia con minuscula (Enum)
+
+
+
+
+
+
+
+
+
+
 
