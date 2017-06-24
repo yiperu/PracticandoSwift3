@@ -142,6 +142,25 @@ OperationQueue.main.addOperation {
 
 UIInterfaceOrientation.landscapeLeft // Ahora landscapeLeft inicia con minuscula (Enum)
 
+// En swift Int es una estructura, No un Objeto
+var entero = 5
+type(of: entero)
+// Any es el nuevo id
+var myString: Any = "My String"
+let sss = myString as? String
+let nss = myString as? NSString
+type(of: sss)
+type(of: nss)
+
+let d1: [AnyHashable: Any] = ["key": 2]
+//let d11: [AnyHashable: AnyObject] = ["key": 2]
+
+let d2: [AnyHashable: AnyObject] = ["key": NSDate()]
+let d22: [AnyHashable: Any] = ["key": NSDate()]
+
+
+
+
 
 
 
