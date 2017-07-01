@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  var animator: UIDynamicAnimator!
+  var gravity: UIGravityBehavior!
+		
+		
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -22,7 +26,23 @@ class ViewController: UIViewController {
 
   @IBAction func btnCreateCircle(_ sender: Any) {
     
-    view.addSubview(circleView(color: getRandomColor()))    
+    let circle = circleView(color: getRandomColor())
+    view.addSubview(circle)
+    
+    animator = UIDynamicAnimator(referenceView: view)
+    gravity = UIGravityBehavior(items: [circle])
+    animator.addBehavior(gravity)
+    
+      animateButton(sender as! UIButton)
+    
+  }
+  
+  
+  
+  func animateButton(_ sender: UIButton) {
+    UIView.animate(withDuration: 1) {
+      sender.backgroundColor = self.getRandomColor()
+    }
   }
   
   func circleView(color: UIColor) -> UIView {
