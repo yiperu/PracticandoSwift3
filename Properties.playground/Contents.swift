@@ -19,8 +19,8 @@ struct Human {
  
   // -- For example of properties observer
   var email: String = "" {
-    willSet(newEmail){
-      print("Old: \(email) New: \(newEmail)")
+    willSet(nuevo){
+      print("Old: \(email) New: \(nuevo)")
     }
     didSet {
       print("👍 \(email)")
